@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         LinearLayout column = findViewById(R.id.layout);
         Button reset = findViewById(R.id.reset);
 
+        //Creates a 5x5 array of buttons with random colors
         for(int y = 0; y < 5; y++){
             LinearLayout row = new LinearLayout(this);
             column.addView(row);
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         reset.setOnClickListener(layout1 -> recreate());
     }
-
+//When a button is tapped, the button will change to black
     @Override
     public void onClick(View view) {
         view.setBackgroundColor(BLACK);
