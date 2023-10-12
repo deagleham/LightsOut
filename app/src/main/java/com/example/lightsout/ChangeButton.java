@@ -7,6 +7,8 @@ import android.content.Context;
 import android.widget.Button;
 
 import androidx.annotation.NonNull;
+//author@ De'Ante Agleham
+//October 8
 
 @SuppressLint("AppCompatCustomView")
 public class ChangeButton extends Button {
@@ -21,18 +23,22 @@ public class ChangeButton extends Button {
         color = col;
     }
 
+    //finds value of x
     public int findX() {
         return x;
     }
 
+    //finds value of x
     public int findY() {
         return y;
     }
 
+    //returns color as a boolean value
     public boolean getColor(){
         return color;
     }
 
+    //switches color of button when called
     public void changeColor(){
         if(color){
             color = false;
@@ -44,6 +50,7 @@ public class ChangeButton extends Button {
         }
     }
 
+    //swaps colors of button and adjacent buttons
     public void colorFlip(@NonNull ChangeButton[][] t, int x, int y){
         t[x][y].changeColor();
         if(x<t.length-1){
@@ -60,6 +67,7 @@ public class ChangeButton extends Button {
         }
     }
 
+    //checks if the win condition has been met
     public boolean win(ChangeButton[][] t){
         int max = t.length * t[0].length;
         int count = 0;
