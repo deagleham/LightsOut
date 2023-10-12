@@ -28,7 +28,7 @@ public class ChangeButton extends Button {
         return x;
     }
 
-    //finds value of x
+    //finds value of y
     public int findY() {
         return y;
     }
